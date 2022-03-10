@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "USta0sPEKfzOu+Lga0vjbcMSkZwFspgIaurpL/aDRp/MgZIpjLCZs1qiSl3AWqOrv1xpqPey7Din7tnNvvDQMA==",
+  "dgSpecHash": "Cu0+gRsTiXn+HXa+KQw5OuP3AC/e6zUJW4vVYMAa7zlj2VeZlVaDSSKvFjqJRBBVtJY2Uer0xr/hxlw1o2BVRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\willt\\theForce\\theForce.csproj",
+  "projectFilePath": "C:\\Users\\willt\\TheForce\\theForce.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

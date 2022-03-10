@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\willt\\theForce\\theForce.csproj": {}
+    "C:\\Users\\willt\\TheForce\\theForce.csproj": {}
   },
   "projects": {
-    "C:\\Users\\willt\\theForce\\theForce.csproj": {
+    "C:\\Users\\willt\\TheForce\\theForce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willt\\theForce\\theForce.csproj",
+        "projectUniqueName": "C:\\Users\\willt\\TheForce\\theForce.csproj",
         "projectName": "theForce",
-        "projectPath": "C:\\Users\\willt\\theForce\\theForce.csproj",
+        "projectPath": "C:\\Users\\willt\\TheForce\\theForce.csproj",
         "packagesPath": "C:\\Users\\willt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willt\\theForce\\obj\\",
+        "outputPath": "C:\\Users\\willt\\TheForce\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\willt\\AppData\\Roaming\\NuGet\\NuGet.Config"

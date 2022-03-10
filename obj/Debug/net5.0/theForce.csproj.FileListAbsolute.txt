@@ -1,0 +1,16 @@
+C:\Users\willt\theForce\bin\Debug\net5.0\theForce.exe
+C:\Users\willt\theForce\bin\Debug\net5.0\theForce.deps.json
+C:\Users\willt\theForce\bin\Debug\net5.0\theForce.runtimeconfig.json
+C:\Users\willt\theForce\bin\Debug\net5.0\theForce.runtimeconfig.dev.json
+C:\Users\willt\theForce\bin\Debug\net5.0\theForce.dll
+C:\Users\willt\theForce\bin\Debug\net5.0\ref\theForce.dll
+C:\Users\willt\theForce\bin\Debug\net5.0\theForce.pdb
+C:\Users\willt\theForce\obj\Debug\net5.0\theForce.csproj.AssemblyReference.cache
+C:\Users\willt\theForce\obj\Debug\net5.0\theForce.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\willt\theForce\obj\Debug\net5.0\theForce.AssemblyInfoInputs.cache
+C:\Users\willt\theForce\obj\Debug\net5.0\theForce.AssemblyInfo.cs
+C:\Users\willt\theForce\obj\Debug\net5.0\theForce.csproj.CoreCompileInputs.cache
+C:\Users\willt\theForce\obj\Debug\net5.0\theForce.dll
+C:\Users\willt\theForce\obj\Debug\net5.0\ref\theForce.dll
+C:\Users\willt\theForce\obj\Debug\net5.0\theForce.pdb
+C:\Users\willt\theForce\obj\Debug\net5.0\theForce.genruntimeconfig.cache
