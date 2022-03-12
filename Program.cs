@@ -36,6 +36,7 @@ namespace theForce
                 else
                 {
                     int temp = BetPayout(handsWon, currBet);
+                    HandLost(handsWon, temp);
                     int tempCredits = (credits + temp);
                     credits = tempCredits;
                     nextHand = 1;
@@ -195,6 +196,18 @@ namespace theForce
             {
                 int temp = (currBet * 3);
                 return temp;
+            }
+        }
+        static void HandLost(int handsWon, int temp)
+        {
+            System.Console.WriteLine("That was incorrect.");
+            if ( temp <= 0)
+            {
+                System.Console.WriteLine($"You lost {(temp * -1)} credits.");
+            }
+            else
+            {
+                System.Console.WriteLine($"You won {temp} credits.");
             }
         }
     }   
