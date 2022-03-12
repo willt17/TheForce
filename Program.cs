@@ -33,6 +33,10 @@ namespace theForce
                     swapCards(ref firstCard, ref nextCard);
                     AskContinue(handsWon, ref nextHand);
                 }
+                else
+                {
+                    int temp = BetPayout(handsWon, currBet);
+                }
             }
 
         }
@@ -165,6 +169,29 @@ namespace theForce
                 {
                     System.Console.WriteLine("That was an invalid choice please try again.");
                 }
+            }
+        }
+        static int BetPayout(int handsWon, int currBet)
+        {
+            if ( handsWon < 5)
+            {
+                int temp = (currBet * -1);
+                return temp;
+            }
+            else if ( handsWon >= 5 && handsWon < 7)
+            {
+                int temp = currBet;
+                return temp;
+            }
+            else if ( handsWon >= 7 && handsWon < 10)
+            {
+                int temp = (currBet * 2);
+                return temp;
+            }
+            else
+            {
+                int temp = (currBet * 3);
+                return temp;
             }
         }
     }   
