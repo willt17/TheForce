@@ -22,8 +22,10 @@ namespace theForce
                 currBet = betSize(credits);
             }
             System.Console.WriteLine(currBet);
-            int currCard = GeneratedRandom();
-            FirstGuess(currCard, deckOfCards);
+            int firstCard = GeneratedRandom();
+            int guess = FirstGuess(firstCard, deckOfCards);
+            int nextCard = GeneratedRandom();
+            bool guessOutcome = GuessCheck(firstCard, nextCard, guess);
         }
         static int betSize(int credits)
         {
@@ -84,14 +86,16 @@ namespace theForce
             int result = rnd.Next(11);
             return result;
         }
-        static void FirstGuess(int currCard, string[] deckOfCards)
+        static int FirstGuess(int currCard, string[] deckOfCards)
         {
             System.Console.WriteLine($"Your first card is {deckOfCards[currCard]}");
             int guessInput = -1;
             while (guessInput == -1)
             {
                 guessInput = AskGuess();
+                return guessInput;
             }
+            return guessInput;
         }
         static int AskGuess()
         {
@@ -100,6 +104,30 @@ namespace theForce
             int guessInput = int.Parse(Console.ReadLine());
             return guessInput;
 
+        }
+        static bool GuessCheck(int firstCard, int nextCard, int guess)
+        {
+            bool win = false;
+            if (firstCard < nextCard && guess == 1)
+            {
+                win = true;
+                return win;
+            }
+            else if (firstCard > nextCard && guess == 1)
+            {
+                win = false;
+                return win;
+            }
+            else if ( firstCard < nextCard && guess == 2)
+            {
+                win = false;
+                return win;
+            }
+            else
+            {
+                win = true;
+                return win;
+            }
         }
     }   
 }
