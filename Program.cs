@@ -8,13 +8,13 @@ namespace theForce
         {
             Console.WriteLine("Welcome to blasters!");
             int credits = 100;
-            Blasters(ref credits);
+            TheForce(ref credits);
         }
-        static void Blasters(ref int credits)
+        static void TheForce(ref int credits)
         {
             string[] deckOfCards = new string[12];
             DeckGenerator(deckOfCards);
-            BlastersExplanation();
+            TheForceExplanation();
             // CardPrint(deckOfCards);
             int currBet = -1;
             while (currBet == -1)
@@ -22,6 +22,8 @@ namespace theForce
                 currBet = betSize(credits);
             }
             System.Console.WriteLine(currBet);
+            int currCard = GeneratedRandom();
+            FirstGuess(currCard, deckOfCards);
         }
         static int betSize(int credits)
         {
@@ -40,7 +42,7 @@ namespace theForce
             }
 
         }
-        static void BlastersExplanation()
+        static void TheForceExplanation()
         {
             System.Console.WriteLine("Welcome to the blasters game.");
             System.Console.WriteLine("You will be given a stack of 10 cards and shown the value of the first one.");
@@ -76,5 +78,28 @@ namespace theForce
         //         System.Console.WriteLine(deckOfCards[i]);
         //     }
         // }
-    }
+        static int GeneratedRandom()
+        {
+            Random rnd = new Random();
+            int result = rnd.Next(11);
+            return result;
+        }
+        static void FirstGuess(int currCard, string[] deckOfCards)
+        {
+            System.Console.WriteLine($"Your first card is {deckOfCards[currCard]}");
+            int guessInput = -1;
+            while (guessInput == -1)
+            {
+                guessInput = AskGuess();
+            }
+        }
+        static int AskGuess()
+        {
+            System.Console.WriteLine("Do you think the next card will be higher or lower?");
+            System.Console.WriteLine("Press 1 for higher or 2 for lower.");
+            int guessInput = int.Parse(Console.ReadLine());
+            return guessInput;
+
+        }
+    }   
 }
