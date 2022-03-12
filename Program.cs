@@ -36,6 +36,9 @@ namespace theForce
                 else
                 {
                     int temp = BetPayout(handsWon, currBet);
+                    int tempCredits = (credits + temp);
+                    credits = tempCredits;
+                    nextHand = 1;
                 }
             }
 
