@@ -15,17 +15,26 @@ namespace theForce
             string[] deckOfCards = new string[12];
             DeckGenerator(deckOfCards);
             TheForceExplanation();
+            int handsWon = 0;
             // CardPrint(deckOfCards);
             int currBet = -1;
-            while (currBet == -1)
-            {
-                currBet = betSize(credits);
-            }
+            currBet = betSize(credits);
             System.Console.WriteLine(currBet);
-            int firstCard = GeneratedRandom();
-            int guess = FirstGuess(firstCard, deckOfCards);
-            int nextCard = GeneratedRandom();
-            bool guessOutcome = GuessCheck(firstCard, nextCard, guess);
+            int nextHand = -1;
+            while ( nextHand == -1)
+            {
+                int firstCard = GeneratedRandom();
+                int guess = FirstGuess(firstCard, deckOfCards);
+                int nextCard = GeneratedRandom();
+                bool guessOutcome = GuessCheck(firstCard, nextCard, guess);
+                if (guessOutcome == true)
+                {
+                    handsWon++;
+                    swapCards(ref firstCard, ref nextCard);
+                    AskContinue(handsWon, ref nextHand);
+                }
+            }
+
         }
         static int betSize(int credits)
         {
@@ -127,6 +136,35 @@ namespace theForce
             {
                 win = true;
                 return win;
+            }
+        }
+        static void swapCards(ref int firstCard, ref int nextCard)
+        {
+            firstCard = nextCard;
+            nextCard = GeneratedRandom();
+        }
+        static void AskContinue(int handsWon, ref int nextHand)
+        {
+            System.Console.WriteLine($"You have won {handsWon} would you like to continue?");
+            System.Console.WriteLine("Press 1 for yes or 2 for no.");
+            int userChoice = 0;
+            while ( userChoice == 0)
+            {
+                userChoice  = int.Parse(Console.ReadLine());
+                if (userChoice == 1)
+                {
+                    nextHand = -1;
+                    userChoice = 1;
+                }
+                else if ( userChoice == 2)
+                {
+                    nextHand = 0;
+                    userChoice = 1;
+                }
+                else
+                {
+                    System.Console.WriteLine("That was an invalid choice please try again.");
+                }
             }
         }
     }   
